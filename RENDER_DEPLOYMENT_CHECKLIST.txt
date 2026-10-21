@@ -1,0 +1,17 @@
+RENDER DEPLOYMENT CHECKLIST
+
+1. Push project folder to GitHub. Never commit .env or secrets.
+2. Create a Render PostgreSQL database.
+3. Create a Render Web Service from the GitHub repo.
+4. Build command: pip install -r requirements.txt
+5. Start command: gunicorn app:app
+6. Web service environment variables:
+   DATABASE_URL=<Render Internal Database URL>
+   SECRET_KEY=<new long random secret>
+   FLASK_DEBUG=False
+   HOTEL_CURRENCY=₹
+   HOTEL_TAX_RATE=0.10
+7. Deploy, then open the app's Settings page and use Initialize Database Schema.
+8. Test adding a room, customer, booking, payment, invoice, and report.
+
+The schema contains no demo records. This conversion is prepared for PostgreSQL but should be smoke-tested on Render before production use.

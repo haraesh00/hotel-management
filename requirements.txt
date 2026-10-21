@@ -1,0 +1,1 @@
+Flask==3.0.3\npsycopg2-binary==2.9.10\npython-dotenv==1.0.1\nWerkzeug==3.0.3\ngunicorn==23.0.0\n
